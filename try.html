@@ -71,58 +71,63 @@
 <div id="resultDisplay"></div>
 <div id="Download_disp"></div>
 </center>
+<!-- ... (your existing HTML and CSS) ... -->
+
 <script>
-function getDetails() {
-  // For pinno Second Year
-  var pinno = document.getElementById('pinno').value;
-  var resultDisplay = document.getElementById("resultDisplay");
-  var dndisp = document.getElementById("Download_disp");
-  var resultImage = document.getElementById("result_image");
-  var loader = document.getElementById("loader");
-
-  if (pinno == '21280') {
-    var Group = document.getElementById('Group').value;
-    if (Group == 'CME') { // For Group
-      var rollno = document.getElementById('rollno').value;
-      var choice = rollno;
-      loader.style.display = "block";
-      resultImage.style.display = "none";
-
-      setTimeout(function () {
-        switch (choice) {
-          case '001':
-           
-              resultDisplay.innerHTML = '<img src="ResultEdited\\Cme1styear\\Cme1styear001.jpg" id="result_image" width="500px">';
-              dndisp.innerHTML = '<a href="ResultEdited\\Cme1styear\\Cme1styear001.jpg" download="Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
-              loader.style.display = "none";
-              resultImage.style.display = "block";
-            resultImage.src = "ResultEdited\\Cme1styear\\Cme1styear001.jpg";
-            break;
-          case '002':
-            // Similar logic for other cases...
-            break;
-          case '003':
-            // Similar logic for other cases...
-            break;
-          case '004':
-            // Similar logic for other cases...
-            break;
-          case '005':
-            // Similar logic for other cases...
-            break;
-          default:
-            resultDisplay.innerHTML = '<p style="color:red;font-size:40px;">No Data Found</p>';
-            dndisp.innerHTML = '';
-            loader.style.display = "none";
-            break;
+    function getDetails() {
+      // For pinno Second Year
+      var pinno = document.getElementById('pinno').value;
+      var resultDisplay = document.getElementById("resultDisplay");
+      var dndisp = document.getElementById("Download_disp");
+      var resultImage = document.getElementById("result_image");
+      var loader = document.getElementById("loader");
+    
+      if (pinno == '21280') {
+        var Group = document.getElementById('Group').value;
+        if (Group == 'CME') { // For Group
+          var rollno = document.getElementById('rollno').value;
+          var choice = rollno;
+          loader.style.display = "block";
+          resultImage.style.display = "none";
+    
+          setTimeout(function () {
+            switch (choice) {
+              case '001':
+                resultImage.onload = function () {
+                  resultDisplay.innerHTML = '<img src="ResultEdited\\Cme1styear\\Cme1styear001.jpg" id="result_image" width="500px">';
+                  dndisp.innerHTML = '<a href="ResultEdited\\Cme1styear\\Cme1styear001.jpg" download="Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+                  resultImage.style.display = "block"; // Display the image when it's loaded
+                };
+                resultImage.src = "ResultEdited\\Cme1styear\\Cme1styear001.jpg";
+                break;
+              case '002':
+                // Similar logic for other cases...
+                break;
+              case '003':
+                // Similar logic for other cases...
+                break;
+              case '004':
+                // Similar logic for other cases...
+                break;
+              case '005':
+                // Similar logic for other cases...
+                break;
+              default:
+                resultDisplay.innerHTML = '<p style="color:red;font-size:40px;">No Data Found</p>';
+                dndisp.innerHTML = '';
+                break;
+            }
+            loader.style.display = "none"; // Move this line outside the setTimeout function
+          }, 1000);
         }
-      }, 1000);
+      }
+      if (pinno == '22280') { // For pinno First Year
+        alert(pinno + "Pin");
+      }
     }
-  }
-  if (pinno == '22280') { // For pinno First Year
-    alert(pinno + "Pin");
-  }
-}
-</script>
+    </script>
+    </body>
+    </html>
+    
 </body>
 </html>

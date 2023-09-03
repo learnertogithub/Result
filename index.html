@@ -1,0 +1,99 @@
+<html>
+<head>
+<link rel="stylesheet" href="result.css">
+<style>
+  #loader {
+    display: none;
+}
+select{
+margin-top:100px;
+font-size: 30px;
+cursor: pointer;
+border-radius: 5px;
+width: 200px;
+}
+
+input{
+font-size: 30px;
+cursor: pointer;
+}
+#rollno{
+cursor: auto;
+}
+select optgroup option{
+padding-left: 10px;
+}
+#result_image{
+margin-top: 50px;
+}
+</style>
+</head>
+<body>
+<center>
+
+<div>
+<select id="pinno">
+<opgroup>
+<option>Pin No</option>
+<option>21280</option>
+<option>22280</option>
+</opgroup>
+</select>
+<select id="Group">
+<opgroup>
+  <option>Group</option>
+<option>CME</option>
+<option>ECE</option>
+<option>EEE</option>
+</opgroup>
+</select>
+<input type="text" placeholder="rollno" size="3" id="rollno">
+<input type="submit" value="Submit" onclick="getDetails()">
+</div>
+<div id="loader">Loading...</div>
+<div id="resultDisplay"></div>
+<div id="Download_disp"></div>
+</center>
+<script>
+function getDetails(){//For pinno Second Year
+var pinno=document.getElementById('pinno').value;
+var resultDisplay=document.getElementById("resultDisplay");
+var dndisp = document.getElementById("Download_disp");
+if(pinno=='21280'){
+var Group=document.getElementById('Group').value;
+if(Group=='CME'){//For Group
+var rollno=document.getElementById('rollno').value;
+var choice=rollno;
+loader.style.display = "block";
+setTimeout (function () {
+switch (choice){
+case '001': resultDisplay.innerHTML='<img src="ResultEdited\\Cme1styear\\Cme1styear001.jpg" id="result_image" width="500px">';
+            dndisp.innerHTML='<a href="my.jpg" download="ResultEdited\\Cme1styear\\Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+            break;
+case '002': resultDisplay.innerHTML='<img src="ResultEdited\\Cme1styear\\Cme1styear002.jpg" id="result_image" width="500px">';
+            dndisp.innerHTML='<a href="my.jpg" download="ResultEdited\\Cme1styear\\Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+            break;
+case '003': resultDisplay.innerHTML='<img src="ResultEdited\\Cme1styear\\Cme1styear003.jpg" id="result_image" width="500px">';
+            dndisp.innerHTML='<a href="my.jpg" download="ResultEdited\\Cme1styear\\Cme1styear003.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+            break;
+case '004': resultDisplay.innerHTML='<img src="ResultEdited\\Cme1styear\\Cme1styear004.jpg" id="result_image" width="500px">';
+            dndisp.innerHTML='<a href="my.jpg" download="ResultEdited\\Cme1styear\\Cme1styear004.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+            break;
+case '005': resultDisplay.innerHTML='<img src="ResultEdited\\Cme1styear\\Cme1styear005.jpg" id="result_image" width="500px">';
+            dndisp.innerHTML='<a href="my.jpg" download="ResultEdited\\Cme1styear\\Cme1styear005.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+            break;            
+default:resultDisplay.innerHTML='<p style="color:red;font-size:40px;">No Data Found</p>';
+        dndisp.innerHTML='';
+        break;
+}
+loader.style.display = "none";
+},1000);
+}
+}
+if(pinno=='22280'){//For pinno First Year
+alert(pinno+"Pin");
+}
+}
+</script>
+</body>
+</html>

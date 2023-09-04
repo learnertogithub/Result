@@ -73,61 +73,62 @@
 </center>
 
 <script>
-    function getDetails() {
-      // For pinno Second Year
-      var pinno = document.getElementById('pinno').value;
-      var resultDisplay = document.getElementById("resultDisplay");
-      var dndisp = document.getElementById("Download_disp");
-      var resultImage = document.getElementById("result_image");
-      var loaderContainer = document.getElementById("loader-container");
-    
-      if (pinno == '21280') {
-        var Group = document.getElementById('Group').value;
-        if (Group == 'CME') { // For Group
-          var rollno = document.getElementById('rollno').value;
-          var choice = rollno;
-    
-          // Show the loader container
-          loaderContainer.style.display = "flex";
-          resultImage.style.display = "none";
-    
-          setTimeout(function () {
-            switch (choice) {
-              case '001':
-                resultImage.onload = function () {
-                  resultDisplay.innerHTML = '<img src="Cme1styear001.jpg" id="result_image" width="500px">';
-                  dndisp.innerHTML = '<a href="Cme1styear001.jpg" download="Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
-                  resultImage.style.display = "block"; // Display the image when it's loaded
-                  // Hide the loader container when the image is fully loaded
-                  loaderContainer.style.display = "none";
-                };
-                break;
-              case '002':
-                // Similar logic for other cases...
-                break;
-              case '003':
-                // Similar logic for other cases...
-                break;
-              case '004':
-                // Similar logic for other cases...
-                break;
-              case '005':
-                // Similar logic for other cases...
-                break;
-              default:
-                resultDisplay.innerHTML = '<p style="color:red;font-size:40px;">No Data Found</p>';
-                dndisp.innerHTML = '';
-                // Hide the loader container if there's no image to load
-                loaderContainer.style.display = "none";
-                break;
-            }
-          }, 1000);
+function getDetails() {
+  // For pinno Second Year
+  var pinno = document.getElementById('pinno').value;
+  var resultDisplay = document.getElementById("resultDisplay");
+  var dndisp = document.getElementById("Download_disp");
+  var resultImage = document.getElementById("result_image");
+  var loaderContainer = document.getElementById("loader-container");
+
+  if (pinno == '21280') {
+    var Group = document.getElementById('Group').value;
+    if (Group == 'CME') { // For Group
+      var rollno = document.getElementById('rollno').value;
+      var choice = rollno;
+
+      // Show the loader container
+      loaderContainer.style.display = "flex";
+      resultImage.style.display = "none";
+
+      setTimeout(function () {
+        switch (choice) {
+          case '001':
+            resultImage.onload = function () {
+              resultDisplay.innerHTML = '<img src="Cme1styear001.jpg" id="result_image" width="500px">';
+              dndisp.innerHTML = '<a href="Cme1styear001.jpg" download="Cme1styear001.jpg" style="margin-top:30px;font-size:20px;">Download</a>';
+              resultImage.style.display = "block"; // Display the image when it's loaded
+              // Hide the loader container when the image is fully loaded
+              loaderContainer.style.display = "none";
+            };
+            resultImage.src = "Cme1styear001.jpg";
+            break;
+          case '002':
+            // Similar logic for other cases...
+            break;
+          case '003':
+            // Similar logic for other cases...
+            break;
+          case '004':
+            // Similar logic for other cases...
+            break;
+          case '005':
+            // Similar logic for other cases...
+            break;
+          default:
+            resultDisplay.innerHTML = '<p style="color:red;font-size:40px;">No Data Found</p>';
+            dndisp.innerHTML = '';
+            // Hide the loader container if there's no image to load
+            loaderContainer.style.display = "none";
+            break;
         }
-      }
-      if (pinno == '22280') { // For pinno First Year
-        alert(pinno + "Pin");
-      }
+      }, 1000);
     }
+  }
+  if (pinno == '22280') { // For pinno First Year
+    alert(pinno + "Pin");
+  }
+}
 </script>
 </body>
 </html>

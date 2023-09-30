@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+body{
+/*background:#577;*/
+}
+h4{
+font-size:30px;
+text-shadow: 1px 1px white;
+}
+  #feedback-form{
+background-image:url('IMG-20230805-WA0003.jpg');
+width:405px;
+border-radius:10px;
+margin-top:50px;
+  }
+  #feedback {
+    font-size: 16px;
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 5px;
+    resize: none;
+    white-space: pre-wrap;
+    overflow: hidden;
+    margin-top:50px;
+  }
+  #box{
+  border-style:solid;
+  width: 400px;
+  height: 500px;
+  border-radius:10px;
+  }
+  #rev{
+  font-size: 34px;
+  }
+input[type=text]{
+width:300px;
+height:40px;
+margin-top:20px;
+border-style:groove;
+border-radius:5px;
+}
+input[type=text]:hover{
+text-shadow: 1px 1px lightblue;
+
+}
+input[type=submit]{
+  margin-top:50px;
+  width:150px;
+   color:white;
+  height:30px;
+  background-image:url('IMG-20230805-WA0004.jpg');
+  border-radius:5px;
+  border-color:black;
+  cursor:pointer;
+}
+input[type=submit]:hover{
+ text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<center>
+<form id="feedback-form">
+<div id="box">
+<h4 id="">Review</h4>
+<input type="text" placeholder="Enter Ur roll no" id="rollNo" required><br>
+<input type="text" placeholder="Name" id="name"><br>
+<textarea name="feedback" id="feedback" rows="4" required placeholder="Feedback"></textarea><br>
+<input type="submit" value="Submit" style="margin-bottom:50px;">
+</div>
+</form>
+</center>
+</div>
+<script src="feed.js">
+</script>
+</body>
+</html>

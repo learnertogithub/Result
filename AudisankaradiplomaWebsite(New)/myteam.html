@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+      #message{
+      text-align: left;
+      }
+        header {
+            color:rgb(60, 60, 109);
+            padding: 0px;
+            width:300px;
+            height:50px;
+            text-align: center;
+        }
+        #info_panel{
+            border-style:none;
+            max-height: calc(100vh - 300px);
+            width:600px;
+           
+            overflow-y: auto;
+            overflow-x: hidden
+            }
+            #info_panel::-webkit-scrollbar {
+                width: 12px;
+               
+            }
+            
+            #info_panel::-webkit-scrollbar-thumb {
+                background-color: #888;
+                border-radius: 6px;
+            }
+            
+            #info_panel::-webkit-scrollbar-track {
+                background-color: #f1f1f1;
+            }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .team-member-details {
+            flex: 1;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Our Team</h1>
+    </header
+    </center>
+    <p id="message">Hi Guys,We are working a lot for developing this website for our diploma students.So if you have Any new Ideas please Contact us .Please Review This Website <a href="Review.html">Rewiew</a></p>
+    <center>
+    <div id="info_panel">
+    <div class="container">
+        <div class="team-member">
+            <img src="profile.png" alt="Team Member 1">
+            <div class="team-member-details">
+                <h2>Sai Anvesh</h2>
+                <p>Position:Web Developer & Host</p>
+                <p>Email: john@example.com</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="profile.png   " alt="Team Member 2">
+            <div class="team-member-details">
+                <h2>Srinadth</h2>
+                <p>Position: Designer</p>
+                <p>Email: jane@example.com</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="profile.png   " alt="Team Member 2">
+            <div class="team-member-details">
+                <h2>Pradeep</h2>
+                <p>Position: Designer</p>
+                <p>Email: jane@example.com</p>
+            </div>
+        </div> 
+        <div class="team-member">
+            <img src="profile.png   " alt="Team Member 2">
+            <div class="team-member-details">
+                <h2>Pavan Kalyan</h2>
+                <p>Position: Designer</p>
+                <p>Email: jane@example.com</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="profile.png   " alt="Team Member 2">
+            <div class="team-member-details">
+                <h2>Shyamala</h2>
+                <p>Position: Designer</p>
+                <p>Email: jane@example.com</p>
+            </div>
+        </div>     
+        <!-- Add more team members as needed -->
+    </div>
+    </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <form id="feedback-form">
+        <label for="rollNo">Enter Your Roll No:</label>
+        <input type="text" name="rollNo" id="rollNo" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea name="feedback" id="feedback" rows="4" required width="100px;"></textarea>
+
+        <input type="submit" value="Submit" onclick="form()">
+    </form>
+
+    <script>
+    function form() {
+        document.getElementById("feedback-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var rollNo = document.getElementById("rollNo").value;
+            var feedback = document.getElementById("feedback").value;
+
+            var emailBody = "Roll No: " + rollNo + "\n\nFeedback:\n" + feedback;
+            var subject = "Feedback Submission";
+
+            // Open the user's default email client with the feedback details
+            var mailToLink = "mailto:saianvesh736@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+            window.location.href = mailToLink;
+        });
+      }
+    </script>
+</body>
+</html>
